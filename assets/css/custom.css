@@ -1,0 +1,83 @@
+
+
+body {
+   /* background-image: url(../img/background.jpg); */
+   color:#097330;
+   overflow: hidden;
+   height: 100vh;
+   box-sizing: border-box;
+   
+   width: 100%;
+}
+
+.banner {
+   position: relative;
+   width: 100%;
+}
+
+.hero {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+}
+
+.hero img {
+   max-height: 100vh;
+   min-width: 100%;
+}
+
+.index-header {
+   color: #b79007;
+   padding-top: 40px;
+   margin-top: 7rem;
+   
+}
+
+
+.index-header strong {
+   font-weight: 900;
+}
+p{
+   font-size: 2 rem;
+   font-weight: 700;
+}
+.form {
+   margin-top: 60px;
+}
+.content{
+   z-index: 999;
+      
+}
+
+.info-login {
+   font-size: 25px;
+}
+
+.img {
+   width: 100%;
+   height: 600px;
+}
+.maskot{
+   margin-top: 4rem;
+}
+
+
+label {
+   font-size: 20px;
+   color: #097330;
+}
+
+.alert {
+   padding:15px 35px;
+}
+footer {
+   font-size: 16px;
+   text-align: center;
+   margin-top: 10%;
+}
+
+.btn-thanks {
+   color: #fff;
+   background-color: red;
+}
