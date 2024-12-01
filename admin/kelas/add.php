@@ -33,25 +33,25 @@ if (mysqli_num_rows($id) > 0) {
 }
 
 ?>
-<h3>Tambah Kelas</h3>
+<h3>Tambah Pimpinan</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form action="" method="post">
 
             <div class="form-group">
-                <label>Id Kelas</label>
+                <label>Id Pimpinan</label>
                 <input class="form-control" type="text" name="id" readonly value="<?php echo $id_kelas; ?>" />
             </div>
 
             <div class="form-group">
-                <label>Nama Kelas</label>
+                <label>Nama pimpinan</label>
                 <input class="form-control" name="kelas" type="text" placeholder="Nama Kelas" />
             </div>
 
             <div class="form-group">
                 <button type="submit" name="add_kelas" value="Tambah Kelas" class="btn btn-success">
-                    Tambah Kelas
+                    Tambah Pimpinan
                 </button>
                 <button type="button" onclick="window.history.go(-1)" class="btn btn-danger">
                     Kembali

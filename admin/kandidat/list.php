@@ -6,10 +6,10 @@ if (!isset($_SESSION['id_admin'])) {
 
 <div class="row">
    <div class="col-md-9">
-      <h3>Daftar Kandidat</h3>
+      <h3>Daftar Kader</h3>
    </div>
    <div class="col-md-3" style="padding-top:10px;">
-      <a class="btn btn-primary" href="?page=kandidat&action=tambah">Tambah Kandidat</a>
+      <a class="btn btn-primary" href="?page=kandidat&action=tambah">Tambah Kader</a>
    </div>
 </div>
 <hr />

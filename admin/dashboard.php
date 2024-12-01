@@ -14,7 +14,7 @@ include('../include/connection.php');
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>E-Voting | Dashboard</title>
+    <title> Musywil | Dashboard</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
@@ -87,13 +87,13 @@ include('../include/connection.php');
                 <a href="./" ><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
             </li>
             <li <?php if (isset($_GET['page']) && $_GET['page'] == 'user') { echo 'class="active"'; } ?>>
-                <a href="?page=user"><i class="fa fa-users"></i>  <span>Manajemen User</span></a>
+                <a href="?page=user"><i class="fa fa-users"></i>  <span>Musyawirin </span></a>
             </li>
             <li <?php if (isset($_GET['page']) && $_GET['page'] == 'kandidat') { echo 'class="active"'; } ?>>
-                <a href="?page=kandidat"><i class="fa fa-users"></i> <span>Manajemen Kandidat</span></a>
+                <a href="?page=kandidat"><i class="fa fa-users"></i> <span>Kandidat</span></a>
             </li>
             <li <?php if (isset($_GET['page']) && $_GET['page'] == 'kelas') { echo 'class="active"'; } ?>>
-                <a href="?page=kelas"><i class="fa fa-university"></i> <span>Manajemen Kelas</span></a>
+                <a href="?page=kelas"><i class="fa fa-university"></i> <span>Pimpinan</span></a>
             </li>
             <li <?php if (isset($_GET['page']) && $_GET['page'] == 'perolehan') { echo 'class="active"'; } ?>>
                 <a href="?page=perolehan"><i class="fa fa-bar-chart"></i> <span>Perolehan</span></a>
@@ -181,7 +181,7 @@ include('../include/connection.php');
 
       <footer class="main-footer">
         
-        <strong>Copyright © Pimpinan Ranting Ikatan Pelajar Muhammadiyah SMK Muhammadiyah 2 Pekanbaru</strong>
+        <strong>Copyright © </strong>
       </footer>
 
     </div>

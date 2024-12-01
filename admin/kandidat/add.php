@@ -10,14 +10,14 @@ if(!isset($_SESSION['id_admin'])) {
         <form action="./kandidat/simpan.php" method="post" enctype="multipart/form-data" class="form-horizontal">
         
             <div class="form-group">
-                <label class="col-sm-3 control-label">Nama Kandidat</label>
+                <label class="col-sm-3 control-label">Nama Kader</label>
                 <div class="col-md-6">
                     <input type="text" name="nama" class="form-control" required="Nama" />
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-sm-3 control-label">Foto Kandidat</label>
+                <label class="col-sm-3 control-label">Foto Kader</label>
                 <div class="col-md-5">
                     <input type="file" name="foto" class="form-control" required="Foto"/>
                 </div>

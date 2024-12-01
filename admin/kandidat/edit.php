@@ -11,7 +11,7 @@ $sql->store_result();
 $sql->bind_result($id, $nama, $foto, $visi, $misi, $suara, $periode);
 $sql->fetch();
 ?>
-<h3>Edit Data Kandidat</h3>
+<h3>Edit Data Kader</h3>
 <hr />
 <div class="row">
    <div class="col-md-3">
@@ -25,14 +25,14 @@ $sql->fetch();
             <input type="hidden" name="f" value="<?php echo $foto; ?>" />
 
             <div class="form-group">
-                <label class="col-sm-3 control-label">Nama Kandidat</label>
+                <label class="col-sm-3 control-label">Nama Kader</label>
                 <div class="col-md-8">
                     <input type="text" class="form-control" name="nama" required="Nama" value="<?php echo $nama; ?>"/>
                 </div>
             </div>
 
             <div class="form-group">
-                  <label class="col-sm-3 control-label">Foto Kandidat</label>
+                  <label class="col-sm-3 control-label">Foto Kader</label>
                <div class="col-md-6">
                   <input type="file" class="form-control" name="foto"/>
                </div>

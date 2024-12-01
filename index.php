@@ -128,9 +128,7 @@ if (isset($_POST['submit'])) {
                         }
                         ?>
 
-                        <!-- <footer>
-                                    Copyright © Pimpinan Ranting Ikatan Pelajar Muhammadiyah SMK Muhammadiyah 2 Pekanbaru
-                              </footer> -->
+                        
                   </div>
             </div>
       </div>

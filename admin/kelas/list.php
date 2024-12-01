@@ -4,10 +4,10 @@ if(!isset($_SESSION['id_admin'])) {
 }
 ?>
 <div class="col-md-9">
-   <h3>Daftar Kelas</h3>
+   <h3>Daftar Pimpinan</h3>
 </div>
 <div class="col-md-3" style="padding-top:10px;">
-   <a class="btn btn-primary" href="?page=kelas&action=tambah">Tambah Kelas</a>
+   <a class="btn btn-primary" href="?page=kelas&action=tambah">Tambah Pimpinan</a>
 </div>
 <div style="clear:both"></div>
 <hr />
@@ -17,8 +17,8 @@ if(!isset($_SESSION['id_admin'])) {
          <thead>
             <tr>
                <th width="80px" style="text-align:center;">#</th>
-               <th style="text-align:center;">Nama Kelas</th>
-               <th width="150px" style="text-align:center;">Jumlah Siswa</th>
+               <th style="text-align:center;">Nama Pimpinan</th>
+               <th width="150px" style="text-align:center;">Jumlah Kader</th>
                <th width="200px" style="text-align:center;">Opsi</th>
             </tr>
          </thead>

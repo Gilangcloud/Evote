@@ -14,25 +14,25 @@ $sql->fetch();
 
 if ($num > 0) {
 ?>
-<h3>Update Kelas</h3>
+<h3>Update Pimpinan</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
 
         <form action="./kelas/update.php" method="post">
             <div class="form-group">
-                <label>Id Kelas</label>
+                <label>Id Pimpinan</label>
                 <input class="form-control" type="text" name="id" readonly value="<?php echo $idk; ?>" />
             </div>
 
             <div class="form-group">
-                <label>Nama Kelas</label>
+                <label>Nama Pimpinan</label>
                 <input class="form-control" name="kelas" type="text" placeholder="Nama Kelas" value="<?php echo $kelas; ?>"/>
             </div>
 
             <div class="form-group">
                 <button type="submit" name="update" value="Update" class="btn btn-success">
-                    Update Kelas
+                    Update Pimpinan
                 </button>
                 <button type="button" onclick="window.history.go(-1)" class="btn btn-danger">
                     Kembali
