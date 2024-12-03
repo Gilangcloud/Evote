@@ -35,7 +35,21 @@ if (isset($_POST['submit'])) {
             header('location:./vote.php');
       } else {
 
-            echo '<script type="text/javascript">alert("Akun ini tidak  terdaftar");</script>';
+            echo '<script type="text/javascript">
+            setTimeout(function () { 
+	            swal({
+	                  title: "Musywil",
+	                  text:  "Akun Ini Tidak Terdaftar",
+	                  type: "warning",
+	                  timer: 3200,
+	                  showConfirmButton: true
+
+	            });   
+	            },10);  
+	            window.setTimeout(function(){ 
+	            window.location.replace("index.php");
+	            } ,3000);
+            </script>';
       }
 }
 
@@ -43,7 +57,6 @@ if (isset($_POST['submit'])) {
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
       <meta charset="utf-8">
       <title>Musyran</title>
@@ -51,6 +64,8 @@ if (isset($_POST['submit'])) {
       <link rel="stylesheet" href="./assets/css/custom.css" />
       <link href="./assets/js/index.js">
       <link rel="icon" type="image/png" href="./assets/img/ipm.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
       <style type="text/css">
             /* .utama {
                   position: fixed;
@@ -128,7 +143,7 @@ if (isset($_POST['submit'])) {
                         }
                         ?>
 
-                        
+
                   </div>
             </div>
       </div>
@@ -146,6 +161,7 @@ if (isset($_POST['submit'])) {
                   event.preventDefault();
             }, false);
       </script>
-</body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+</body>     
 
 </html>

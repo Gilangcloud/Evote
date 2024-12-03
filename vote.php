@@ -16,7 +16,7 @@ if(!isset($_SESSION['siswa'])) {
       <link href="./assets/js/index.js">
       <style media="screen">
          body {
-            background-color: #097330;
+            background-color: #F16D00;
             color:white;
          }
          .img {
@@ -83,9 +83,8 @@ if(!isset($_SESSION['siswa'])) {
          align-items: center;
          }
 
-         /* On mouse-over, add a grey background color */
          .checkbox-container:hover input ~ .checkmark {
-         background-color: #ccc;
+         background-color: #ffffff;
          }
 
          /* When the checkbox is checked, add a blue background */
@@ -126,7 +125,7 @@ if(!isset($_SESSION['siswa'])) {
          }
 
          .beri-suara.clicked {
-            background-color: #b79007; /* yellow color when clicked */
+            background-color: #b43a23; 
             color: #000000;
          }
       </style>
@@ -147,7 +146,7 @@ if(!isset($_SESSION['siswa'])) {
          if ($sql->num_rows() > 0) {
             $numb = $sql->num_rows();
             echo '<div class="text-center" style="padding-top:20px;">
-                     <h2>DAFTAR CALON FORMATUR PR IPM SMK MUDA '.$periode.'</h2>
+                     <h2>DAFTAR CALON FORMATUR PW IPM RIAU '.$periode.'</h2>
                   </div>
                   <hr />';
 
@@ -172,7 +171,7 @@ if(!isset($_SESSION['siswa'])) {
                               <img src="./assets/img/kandidat/<?php echo $foto; ?>" class="img" draggable="false"  oncontextmenu="return false;">
                               <!-- <p class="nama"><?php echo $nama; ?></p> -->
                               <div class="caption">
-                                 <a href="./detail.php?id=<?php echo $id; ?>" class="btn btn-warning btn-block">Lihat Visi Misi</a>
+                                 <!-- <a href="./detail.php?id=<?php echo $id; ?>" class="btn btn-warning btn-block">Lihat Visi Misi</a> -->
                                  <!-- <input type="checkbox" name="candidates[]" value="<?php echo $id; ?>">
                                  <label>Pilih</label> -->
                                  <label class="checkbox-container">

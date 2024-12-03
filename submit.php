@@ -16,10 +16,35 @@ $candidates = $_POST['candidates'];
 
 // Cek apakah pengguna telah memilih 10 kandidat
 if (count($candidates) != 10) {
-    // Jika tidak, tampilkan alert dan kembali ke halaman sebelumnya
-    // Simpan jawaban sebelumnya ke dalam session
+    // Jika tidak, simpan jawaban sebelumnya ke dalam session
     $_SESSION['jawaban_sebelumnya'] = $candidates;
-    echo '<script>alert("Silahkan memilih 10 kandidat!"); history.back();</script>';
+
+    // Tampilkan SweetAlert2
+    echo '<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alert</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+        <script type="text/javascript">
+            Swal.fire({
+                title: "Musywil PW IPM RIAU",
+                text: "Silahkan Memilih 10 Kandidat!",
+                icon: "warning",
+                confirmButtonText: "Kembali",
+            })
+                .then((result) => {
+                if (result.isConfirmed) {
+                    history.back();
+                }
+            });
+        </script>
+    </body>
+    </html>';
     exit;
 }
 
@@ -39,4 +64,4 @@ $save->execute();
 unset($_SESSION['siswa']);
 
 header('location:./index.php?page=thanks');
-?>  
+?>
