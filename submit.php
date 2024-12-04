@@ -15,7 +15,7 @@ $periode = $thn.'/'.$dpn;
 $candidates = $_POST['candidates'];
 
 // Cek apakah pengguna telah memilih 10 kandidat
-if (count($candidates) != 10) {
+if (count($candidates) != 2) {
     // Jika tidak, simpan jawaban sebelumnya ke dalam session
     $_SESSION['jawaban_sebelumnya'] = $candidates;
 
@@ -33,7 +33,7 @@ if (count($candidates) != 10) {
         <script type="text/javascript">
             Swal.fire({
                 title: "Musywil PW IPM RIAU",
-                text: "Silahkan Memilih 10 Kandidat!",
+                text: "Silahkan Memilih 2 Kandidat!",
                 icon: "warning",
                 confirmButtonText: "Kembali",
             })

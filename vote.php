@@ -10,7 +10,7 @@ if(!isset($_SESSION['siswa'])) {
 <html>
    <head>
       <meta charset="utf-8">
-      <title>Musyran</title>
+      <title>Musywil</title>
       <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
       <link rel="stylesheet" href="./assets/css/animate.css"/>
       <link href="./assets/js/index.js">

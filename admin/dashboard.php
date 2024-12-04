@@ -181,7 +181,7 @@ include('../include/connection.php');
 
       <footer class="main-footer">
         
-        <strong>Copyright © </strong>
+        <strong>Copyright © PANLIHWIL IPM RIAU  2024</strong>
       </footer>
 
     </div>

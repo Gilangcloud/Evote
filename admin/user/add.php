@@ -40,14 +40,14 @@ if(isset($_POST['add_user'])) {
 
 }
 ?>
-<h3>Tambah Data Siswa</h3>
+<h3>Tambah Musyawirin</h3>
 <hr />
 <div class="row">
     <div class="col-md-8 col-sm-12">
         <form action="" method="post" class="form-horizontal">
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">NIS</label>
+                <label class="col-sm-2 control-label">Id</label>
                 <div class="col-md-4">
                     <input class="form-control" type="number" name="nis" placeholder="NIS" type="number"/>
                 </div>
@@ -74,10 +74,10 @@ if(isset($_POST['add_user'])) {
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">Kelas</label>
+                <label class="col-sm-2 control-label">Pimpinan</label>
                 <div class="col-md-6">
                     <select name="kelas" required="kelas" class="form-control">
-                        <option value="#">-- Pilih Kelas --</option>
+                        <option value="#">-- Pilih Pimpinan --</option>
                         <?php
                             $kelas = mysqli_query($con, "SELECT * FROM t_kelas");
                             while ($key = mysqli_fetch_array($kelas)) {
@@ -94,7 +94,7 @@ if(isset($_POST['add_user'])) {
 
             <div class="form-group">
                 <div class="col-md-8 col-md-offset-2">
-                    <button type="submit" name="add_user" value="Tambah User" class="btn btn-success">Tambah Siswa</button>
+                    <button type="submit" name="add_user" value="Tambah User" class="btn btn-success">Tambah Musyawirin</button>
                     <button type="button" onclick="window.history.back()" class="btn btn-danger">Kembali</button>
                 </div>
             </div>

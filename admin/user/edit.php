@@ -13,21 +13,21 @@ $sql->bind_result($id_user, $fullname, $kls, $jk, $pemilih);
 $sql->fetch();
 
 ?>
-<h3>Update Data Siswa</h3>
+<h3>Update Data Musyawirin</h3>
 <hr />
 <div class="row">
     <div class="col-md-8 col-sm-12">
         <form action="./user/update.php" method="post" class="form-horizontal">
       
             <div class="form-group">
-                <label class="col-sm-2 control-label">NIS</label>
+                <label class="col-sm-2 control-label">Id</label>
                 <div class="col-md-4">
                     <input class="form-control" type="number" name="nis" placeholder="NIS" type="number" readonly value="<?php echo $id_user; ?>"/>
                 </div>
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Nama Siswa</label>
+                <label class="col-sm-2 control-label">Nama Musyawirin</label>
                 <div class="col-md-8">
                     <input class="form-control" name="nama" type="text" placeholder="Nama Siswa" value="<?php echo $fullname; ?>"/>
                 </div>
@@ -46,7 +46,7 @@ $sql->fetch();
             </div>
             
             <div class="form-group">
-                <label class="col-sm-2 control-label">Kelas</label>
+                <label class="col-sm-2 control-label">Pimpinan</label>
                 <div class="col-md-6">
                     <select name="kelas" required="kelas" class="form-control">
                         <option value="#">-- Pilih Kelas --</option>
@@ -75,7 +75,7 @@ $sql->fetch();
             </div>
             <div class="form-group">
                 <div class="col-md-8 col-md-offset-2">
-                    <button type="submit" name="update" value="Update User" class="btn btn-success">Update Siswa</button>
+                    <button type="submit" name="update" value="Update User" class="btn btn-success">Update Musyawirin</button>
                     <button type="button" onclick="window.history.go(-1)" class="btn btn-danger">Kembali</button>
                 </div>
             </div>
