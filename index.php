@@ -135,6 +135,67 @@
       if (isset($_SESSION['siswa'])) {
             header('location:./vote.php');
       }
+      if (isset($_POST['submit'])) {
+
+            require('include/connection.php');
+
+            $nis     = $_POST['nis'];
+            $thn     = date('Y');
+            $dpn     = date('Y') + 1;
+            $periode = $thn . '/' . $dpn;
+
+            $cek = $con->prepare("SELECT * FROM t_pemilih WHERE nis = ? && periode = ?") or die($con->error);
+            $cek->bind_param('ss', $nis, $periode);
+            $cek->execute();
+            $cek->store_result();
+
+            if ($cek->num_rows() > 0) {
+
+                  echo '<script type="text/javascript">
+                              Swal.fire({
+                                    title: "Musywil PW IPM RIAU",
+                                    text: "Anda Sudah Memberikan Suara",
+                                    icon: "error",
+                                    confirmButtonText: "Kembali",
+                              })
+                              .then((result) => {
+                                    if (result.isConfirmed) {
+                                          history.back();
+                                    }
+                              });
+                        </script>';
+            } else {
+
+                  $sql = $con->prepare("SELECT * FROM t_user WHERE id_user = ? && pemilih = 'Y'") or die($con->error);
+                  $sql->bind_param('s', $nis);
+                  $sql->execute();
+                  $sql->store_result();
+
+                  if ($sql->num_rows() > 0) {
+                        $sql->bind_result($id, $user, $kelas, $jk, $pemilih);
+                        $sql->fetch();
+
+                        $_SESSION['siswa'] = $id;
+
+                        header('location:./vote.php');
+                  } else {
+
+                        echo '<script type="text/javascript">
+                              Swal.fire({
+                                    title: "Musywil PW IPM RIAU",
+                                    text: "Akun Ini Tidak Terdaftar",
+                                    icon: "error",
+                                    confirmButtonText: "Kembali",
+                              })
+                              .then((result) => {
+                                    if (result.isConfirmed) {
+                                          history.back();
+                                    }
+                              });
+                        </script>';
+                  }
+            }
+      }
 
       if (isset($_POST['submit'])) {
             require('include/connection.php');
