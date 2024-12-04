@@ -1,3 +1,3 @@
-# e-voting
+# evoting
 
-Aplikasi Musyran Smk Muda
+Aplikasi Pemilihan Online
