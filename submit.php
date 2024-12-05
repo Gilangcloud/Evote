@@ -13,6 +13,9 @@ $dpn     = date('Y') + 1;
 $periode = $thn.'/'.$dpn;
 
 $candidates = $_POST['candidates'];
+$id_pemilih  = $_POST['user_id'];
+
+
 
 // Cek apakah pengguna telah memilih 10 kandidat
 if (count($candidates) != 2) {
@@ -54,12 +57,18 @@ foreach ($candidates as $candidateId) {
     $update  = $con->prepare("UPDATE t_kandidat SET suara = suara + ? WHERE id_kandidat = ?") or die($con->error);
     $update->bind_param('is', $suara, $candidateId);
     $update->execute();
+
 }
 
+$updatePemilih  = $con->prepare("UPDATE t_user SET pemilih =  'N' WHERE id_user = $id_pemilih ") or die($con->error);
+$updatePemilih->execute();
 // Save the voter's data
 $save = $con->prepare("INSERT INTO t_pemilih(nis, periode) VALUES(?,?)") or die($con->error);
 $save->bind_param('ss', $_SESSION['siswa'], $periode);
 $save->execute();
+
+
+
 
 unset($_SESSION['siswa']);
 

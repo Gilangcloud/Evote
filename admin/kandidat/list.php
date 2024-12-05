@@ -19,7 +19,7 @@ if (!isset($_SESSION['id_admin'])) {
             <option value="">-- Pilih Periode--</option>
             <?php
             for ($i=16; $i < 30; $i++) {
-               $k = $i + 1;
+               $k = $i + 2;
                echo '<option value="20'.$i.'/20'.$k.'">Periode 20'.$i.' / 20'.$k.'</option>';
             }
             ?>

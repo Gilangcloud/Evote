@@ -183,7 +183,7 @@
                         echo '<script type="text/javascript">
                               Swal.fire({
                                     title: "Musywil PW IPM RIAU",
-                                    text: "Akun Ini Tidak Terdaftar",
+                                    text: "Akun Ini Tidak Terdaftar / Sudah Memilih",
                                     icon: "error",
                                     confirmButtonText: "Kembali",
                               })
@@ -229,7 +229,7 @@
                   echo '<script type="text/javascript">
                   Swal.fire({
                         title: "Musywil PW IPM RIAU",
-                        text: "Akun Ini Tidak Terdaftar",
+                        text: "Akun Ini Tidak Terdaftar / Sudah Memilih",
                         icon: "error",
                         confirmButtonText: "Kembali",
                   })
